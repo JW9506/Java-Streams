@@ -6,7 +6,7 @@ import java.io.IOException;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class File_Reader {
+public class FileReaderDemo {
   public static void main(String[] args) {
     String fileName = "input.txt"; // Replace with your file name
 
