@@ -14,8 +14,15 @@ public class Main {
 
   public static void main(String[] args) {
     List<String> planets = new ArrayList<>();
-    Collections.addAll(planets, "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus",
-        "Neptune");
+    Collections.addAll(planets, 
+      "Mercury", //
+      "Venus", //
+      "Earth", //
+      "Mars", //
+      "Jupiter", //
+      "Saturn", //
+      "Uranus", //
+      "Neptune");
 
     // Stream to Array
     String[] array = planets.stream().filter(s -> s.startsWith("M")).toArray(String[]::new);
