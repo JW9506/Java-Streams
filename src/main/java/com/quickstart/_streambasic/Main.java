@@ -6,36 +6,28 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-@Slf4j
 public class Main {
-    public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
-        Collections.addAll(list, 
-        "张無忌",
-        "周芷若",
-        "赵敏",
-        "张强",
-        "张三丰"
-        );
+  private static final Logger log = LoggerFactory.getLogger(Main.class);
 
-        Stream<String> zhanglist;
-        
-        // Stream to Array
-        zhanglist = list.stream().filter(s -> s.startsWith("张"));
-        String[] array = zhanglist.toArray(String[]::new);
-        log.info("{}", Arrays.toString(array));
+  public static void main(String[] args) {
+    List<String> planets = new ArrayList<>();
+    Collections.addAll(planets, "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus",
+        "Neptune");
 
-        // Stream to Set
-        zhanglist = list.stream().filter(s -> s.startsWith("张"));
-        Set<String> sets = zhanglist.collect(Collectors.toSet());
-        log.info("{}", sets);
+    // Stream to Array
+    String[] array = planets.stream().filter(s -> s.startsWith("M")).toArray(String[]::new);
+    log.info("Array of planets starting with M: {}", Arrays.toString(array));
 
-        // Stream to List
-        zhanglist = list.stream().filter(s -> s.startsWith("张"));
-        List<String> lists = zhanglist.collect(Collectors.toList());
-        log.info("{}", lists);
-    }
+    // Stream to Set
+    Set<String> sets = planets.stream().filter(s -> s.startsWith("M")).collect(Collectors.toSet());
+    log.info("Set of planets starting with M: {}", sets);
+
+    // Stream to List
+    List<String> filteredList =
+        planets.stream().filter(s -> s.startsWith("M")).collect(Collectors.toList());
+    log.info("List of planets starting with M: {}", filteredList);
+  }
 }
