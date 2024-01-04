@@ -2,6 +2,6 @@
 
 [IO Stream, File](./src/main/java/com/quickstart/_IOStreambasic/FileInputStreamDemo.java)
 
-[File Reader, BufferedReader](./src/main/java/com/quickstart/_IOStreambasic/FileReaderDemo.java)
+[File Reader, BufferedReader, Character-Oriented](./src/main/java/com/quickstart/_IOStreambasic/FileReaderDemo.java)
 
-[Read Bytes From Files](./src/main/java/com/quickstart/_IOStreambasic/ByteRead.java)
+[Read Bytes From Files, Byte-Oriented](./src/main/java/com/quickstart/_IOStreambasic/ByteRead.java)
